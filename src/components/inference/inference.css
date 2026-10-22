@@ -1,0 +1,34 @@
+.inference-base {
+  width: min(100%, 300px);
+  margin-bottom: 20px;
+}
+
+.inference-notice {
+  margin-top: 16px;
+}
+
+.candidate-details {
+  padding: 16px;
+}
+
+.inference-timeline {
+  padding: 20px 0 0 12px;
+}
+
+.trace-condition {
+  margin-top: 8px;
+}
+
+.process-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.process-model {
+  width: min(100%, 320px);
+}
+

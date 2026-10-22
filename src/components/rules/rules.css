@@ -1,0 +1,43 @@
+.rule-toolbar {
+  display: grid;
+  grid-template-columns: minmax(160px, 240px) minmax(180px, 1fr) 140px;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.rule-conditions {
+  width: 100%;
+}
+
+.condition-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 1.3fr) minmax(110px, 1fr) minmax(120px, 1fr) 34px;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.condition-row .el-input-number {
+  width: 100%;
+}
+
+.condition-summary {
+  margin-top: 6px;
+  overflow-wrap: anywhere;
+}
+
+.rule-details {
+  padding: 16px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 650px) {
+  .rule-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .condition-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--el-border-color-lighter);
+  }
+}

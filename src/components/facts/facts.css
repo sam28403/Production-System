@@ -1,0 +1,21 @@
+.fact-toolbar {
+  display: grid;
+  grid-template-columns: minmax(160px, 240px) minmax(180px, 1fr) 190px;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.fact-number-input {
+  width: 100%;
+}
+
+.fact-details {
+  padding: 16px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 650px) {
+  .fact-toolbar {
+    grid-template-columns: 1fr;
+  }
+}

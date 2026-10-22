@@ -1,0 +1,39 @@
+{
+  "name": "production",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.15.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "node --env-file-if-exists=.env.local --watch server/index.js",
+    "dev:full": "concurrently --kill-others --names API,WEB --prefix-colors green,cyan \"npm:dev:server\" \"npm:dev\"",
+    "test": "node --test server/tests/*.test.js",
+    "data:collect": "node scripts/railway/collect.js --serial",
+    "data:build": "node scripts/railway/build-rules.js",
+    "data:import": "node scripts/railway/import.js",
+    "data:weather": "node scripts/railway/collect-weather.js",
+    "data:facts": "node scripts/railway/complete-facts.js",
+    "graph:check": "node --env-file-if-exists=.env.local scripts/graph/check.js",
+    "graph:sync": "node --env-file-if-exists=.env.local scripts/graph/sync.js",
+    "test:neo4j": "node --env-file-if-exists=.env.local --test server/integration/neo4j.test.js",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.10",
+    "cheerio": "^1.2.0",
+    "concurrently": "^10.0.6",
+    "vite": "^8.3.4"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "cytoscape": "^3.34.4",
+    "element-plus": "^2.14.7",
+    "express": "^5.3.0",
+    "neo4j-driver": "^6.2.0",
+    "vue": "^3.5.44"
+  }
+}
